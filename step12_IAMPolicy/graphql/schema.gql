@@ -1,0 +1,17 @@
+type Query {
+    welcome:String
+}
+
+type Data { 
+    id:String
+    title:String
+}
+
+type InputData { 
+    id:String
+    title:String
+}
+
+type Mutation {
+    createData(id:String , title:String):Data
+}

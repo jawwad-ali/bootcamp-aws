@@ -1,0 +1,23 @@
+type Event {
+  result: String
+}
+
+type Query {
+  getEvent: [Event]
+}
+
+type TimeSlot {
+  from: String!
+  to: String!
+}
+
+input InputTimeSlot {
+  from: String!
+  to: String!
+}
+
+type Mutation {
+  createEvent(event: String!): Event
+  addTimeSlot(timeSlot: InputTimeSlot!): Event
+  deleteTimeSlot(id: String!): Event
+}

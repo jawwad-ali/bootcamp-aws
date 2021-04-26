@@ -1,0 +1,17 @@
+type Email{
+    emailAddress:String
+    message:String
+}
+
+input EmailInput{
+    emailAddress:String
+    message:String
+}
+
+type Query {
+    listEmail:[Email]
+}
+
+type Mutation {
+    sendEmail(email:EmailInput):
+}
